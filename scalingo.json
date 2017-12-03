@@ -19,6 +19,14 @@
     "DATABASE_URI": {
       "description": "Connection string for your database.",
       "value": "$SCALINGO_MONGO_URL"
+    },
+    "ONESIGNAL_ID": {
+      "description": "OneSignal App ID",
+      "value": ""
+    },
+    "ONESIGNAL_KEY": {
+      "description": "OneSignal Key",
+      "value": ""
     }
   },
   "addons": ["scalingo-mongodb"]

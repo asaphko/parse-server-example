@@ -119,8 +119,16 @@
             "value": "[parameters('parseServerUrl')]"
             },
             {
-                "name": "WEBSITE_NODE_DEFAULT_VERSION",
-                "value": "4.2.3"
+            "name": "ONESIGNAL_ID",
+            "value": "[parameters('oneSignalId')]"
+            },
+            {
+            "name": "ONESIGNAL_KEY",
+            "value": "[parameters('oneSignalKey')]"
+            },
+            {
+            "name": "WEBSITE_NODE_DEFAULT_VERSION",
+            "value": "4.2.3"
             }
             ]
           }

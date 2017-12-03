@@ -1,6 +1,6 @@
 {
-  "name": "Parse Server Example",
-  "description": "An example Parse API server using the parse-server module",
+  "name": "TRACKSi Parse Server Example",
+  "description": "Parse Server Backend for the TRACKSi project",
   "repository": "https://github.com/ParsePlatform/parse-server-example",
   "logo": "https://avatars0.githubusercontent.com/u/1294580?v=3&s=200",
   "keywords": ["node", "express", "parse"],
@@ -20,6 +20,14 @@
     "SERVER_URL": {
       "description": "URL to connect to your Heroku instance (update with your app's name + PARSE_MOUNT)",
       "value": "http://yourappname.herokuapp.com/parse"
+    },
+    "ONESIGNAL_ID": {
+      "description": "OneSignal App ID",
+      "value": "1234567-8910-1234-5678-901234567890"
+    },
+    "ONESIGNAL_KEY": {
+      "description": "OneSignal Key",
+      "value": "AaBbCcDd12345AaBbCcDd12345AaBbCcDd12345"
     }
   },
   "image": "heroku/nodejs",
