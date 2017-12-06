@@ -7,9 +7,7 @@ Parse.Cloud.job("sendPush", function (request, response) {
     // create new config:
     var ConfigObject = Parse.Object.extend('ConfigObject');
     var object = new ConfigObject();
-    object.set('locked', true);
-    object.set('triggered', true);
-    object.set('notified', true);
+    object.set('state', 3);
     object.save();
 
     var jsonBody = {
@@ -43,9 +41,7 @@ Parse.Cloud.job("lock", function (request, response) {
     // create new config in locked mode:
     var ConfigObject = Parse.Object.extend('ConfigObject');
     var object = new ConfigObject();
-    object.set('locked', true);
-    object.set('triggered', false);
-    object.set('notified', false);
+    object.set('state', 1);
     object.save();
 });
 
@@ -53,9 +49,7 @@ Parse.Cloud.job("unlock", function (request, response) {
     // create new config in locked mode:
     var ConfigObject = Parse.Object.extend('ConfigObject');
     var object = new ConfigObject();
-    object.set('locked', false);
-    object.set('triggered', false);
-    object.set('notified', false);
+    object.set('state', 0);
     object.save();
 });
 
@@ -63,8 +57,6 @@ Parse.Cloud.job("trigger", function (request, response) {
     // create new config in locked mode:
     var ConfigObject = Parse.Object.extend('ConfigObject');
     var object = new ConfigObject();
-    object.set('locked', true);
-    object.set('triggered', true);
-    object.set('notified', false);
+    object.set('state', 2);
     object.save();
 });
